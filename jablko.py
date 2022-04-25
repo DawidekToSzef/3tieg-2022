@@ -1,19 +1,20 @@
 import random
+
 import pygame
+
 
 class Jablko():
     #konstruktor klasy
     def __init__(self):
-        self.pozycjaJablka=[(1,1)]
-        self.losujPozycje()
-    def setPozycja(self,x,y):
-        self.pozycjaJablka[0]=(x,y)
-    def getPozycja(self):
-        return self.pozycjaJablka[-1]
-    def losujPozycje(self):
-        #losowanie pozycji jabłka
-        appleX=random.randint(0,21)*20+10
-        appleY=random.randint(0,21)*20+10
-        self.setPozycja(appleX,appleY)
-    def rysujJablko(self,oknoGry):
-        pygame.draw.circle(oknoGry,(128,0,0),(self.pozycjaJablka[0][0],self.pozycjaJablka[0][1]),10)
+        self.kolor=(18,27,11)
+        self.applePosition=(20,20)
+    def setPosition(self,x,y):
+        self.applePosition=(x,y)
+    def getPosition(self):
+        return self.applePosition
+    def randomPosition(self):
+        xApple=random.randint(0,9)*40+20
+        yApple=random.randint(0,9)*40+20
+        self.setPosition(xApple,yApple)
+    def drawApple(self,OknoGry):
+        pygame.draw.circle(OknoGry,self.kolor,(self.applePosition[0],self.applePosition[1]),20)
