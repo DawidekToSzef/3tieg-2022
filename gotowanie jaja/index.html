@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotowanie jajka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="skrypt.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Algorytm gotowania jajka</h1>
+    <div id="krok1">
+        <p>Przygotuj garnek jajka wode i kuchnke</p>
+        <form>
+            Czy wykonales powyzsze zadanie?
+            <input type="button" value="TAK" onclick="tak()">
+        </form>
+    </div>
+    <div id="krok2">
+        <p> Sprawdz czy woda jest zimna i jajko jest umieszczone w garnku z woda</p>
+        Czy wszsto jest zgodne z powyzsza instrukcja?
+        <form>
+            <input type="button" value="tak" onclick="tak2()">
+            <input type="button" value="nie" onclick="nie2()">
+        </form>
+    </div>
+    <p id="niekrok2">Wlej zimna wode do garnka i wloz do niej jajko</p>
+    <div id="krok3">
+        <p>Sprawdz czy kuchenka jest wlaczona</p>
+        Czy wszystko jest zgodne z powyzsza instrukcja?
+        <form>
+            <input type="button" value="Tak" onclick="tak3()">
+            <input type="button" value="Nie" onclick="nie3()">
+        </form>
+    </div>
+    <div id="takkrok3">
+        <p>Postaw garnek na kuchenke i wlacz grzanie na 10min</p>
+        Czy minelo 10min?
+        <form>
+            <input type="button" value="tak" onclick="dzminut()">
+        </form>
+    </div>
+    <div id="gotowe">
+        <p>Gotowe - jajka ugotowane!</p>
+    </div>
+    </div>
+    
+</body>
+</html>
